@@ -1,8 +1,8 @@
 [package]
-name = "klipstat"
+name = "klipfetch"
 version = "0.1.0"
 edition = "2021"
-repository = "https://github.com/FraI3mega/klipstat"
+repository = "https://github.com/FraI3mega/klipfetch"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
@@ -18,16 +18,3 @@ clap = { version = "4.5.20", features = ["derive"] }
 [profile.dist]
 inherits = "release"
 lto = "thin"
-
-# Config for 'cargo dist'
-[workspace.metadata.dist]
-# The preferred cargo-dist version to use in CI (Cargo.toml SemVer syntax)
-cargo-dist-version = "0.22.1"
-# CI backends to support
-ci = "github"
-# The installers to generate for each app
-installers = []
-# Target platforms to build apps for (Rust target-triple syntax)
-targets = ["aarch64-apple-darwin", "x86_64-apple-darwin", "x86_64-unknown-linux-gnu", "x86_64-pc-windows-msvc"]
-# Which actions to run on pull requests
-pr-run-mode = "plan"

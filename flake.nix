@@ -34,7 +34,6 @@
             ];
 
             shellHook = ''
-              alias find=fd
             '';
           };
       }
